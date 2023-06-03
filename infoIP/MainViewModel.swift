@@ -32,7 +32,7 @@ extension MainView{
             }
         }
         
-        private func fetchIP(){
+         func fetchIP(){
             api.fetchData(url: "https://api.ipify.org/?format=json", model: IP.self){result in
                 
                 self.runOnMain {
