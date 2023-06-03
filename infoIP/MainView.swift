@@ -42,14 +42,18 @@ struct MainView: View {
                         }
                     
                     }.onAppear{
-                        if networkMonitor.isExpensive == false {
-                            connectionType = "Wi-Fi"
-                        }else{
+                        if networkMonitor.isExpensive{
                             connectionType = "Mobile Data"
+                        }else{
+                            connectionType = "Wi-Fi"
                         }
                     }
                 Section (header: Text("Location")){
-                    Text("\(vm.ipGeo.city) - \(vm.ipGeo.region)")
+                    HStack {
+                        Spacer()
+                        Text("\(vm.ipGeo.city) - \(vm.ipGeo.region)")
+                        Spacer()
+                    }
                     ZStack {
                         Map(coordinateRegion: $vm.location)
                             .cornerRadius(10)
@@ -72,7 +76,7 @@ struct MainView: View {
                     }.frame(maxWidth: .infinity,maxHeight: 300,alignment: .center)
                     
                     HStack {
-                        Text("Provedor: ")
+                        Text("Provider: ")
                         Spacer()
                         Text("\(vm.ipGeo.org)")
                     }
