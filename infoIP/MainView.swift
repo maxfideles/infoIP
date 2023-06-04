@@ -17,84 +17,73 @@ struct MainView: View {
         
         //verbatim: Creates a text view that displays a string literal without localization.
        
-        NavigationView {
+      //  NavigationView {
+        VStack {
             Form{
-                Section(header: HStack{Text("Network"); Image(systemName: networkMonitor.isActive ? "checkmark.circle":"x.circle")
-                    .foregroundColor(networkMonitor.isActive ? .green:.red); Text(networkMonitor.isActive ? "" : "Check your connection").font(.caption2).foregroundColor(.accentColor) }){
-                        HStack {
-                            Text(verbatim: "Connection Type: " )
-                            Spacer()
+                    Section(header: HStack{Text("Network"); Image(systemName: networkMonitor.isActive ? "checkmark.circle":"x.circle")
+                        .foregroundColor(networkMonitor.isActive ? .green:.red); Text(networkMonitor.isActive ? "" : "Check your connection").font(.caption2).foregroundColor(.accentColor) }){
                             HStack {
-                                Text(connectionType)
-                                Image(systemName:  networkMonitor.isExpensive ? "personalhotspot":"wifi")
+                                Text(verbatim: "Connection Type: " )
+                                Spacer()
+                                HStack {
+                                    Text(networkMonitor.isExpensive ? "Mobile Data":"Wi-Fi")
+                                    Image(systemName:  networkMonitor.isExpensive ? "personalhotspot":"wifi")
+                                    
+                                }
+                            }
+                            HStack {
+                                Text("Local IP: ")
+                                Spacer()
+                                Text("\(vm.ipLocal)")
+                            }
+                            HStack {
+                                Text("Public IP: ")
+                                Spacer()
+                                Text("\(vm.ipAddress)")
+                            }
+                        
+                        }
+                    Section (header: Text("Location")){
+                        HStack {
+                            Spacer()
+                            Text("\(vm.ipGeo.city) - \(vm.ipGeo.region)")
+                            Spacer()
+                        }
+                        ZStack {
+                            Map(coordinateRegion: $vm.location)
+                                .cornerRadius(10)
+                                .frame(width: 300,height: 300,alignment: .center)
                                 
+                            Circle()
+                                .frame(width: 20,height: 20,alignment: .center)
+                                .foregroundColor(.blue.opacity(0.2))
+                            VStack {
+                                Spacer()
+                                VStack(spacing: 10){
+                                    Text("IP: \(vm.ipAddress)")
+                                    Text("\(vm.ipGeo.country_name)")
+                                }
+                                .font(.caption)
+                                .frame(width: 150)
+                                .background(.thinMaterial.opacity(0.7))
+                                .cornerRadius(7)
                             }
-                        }
-                        HStack {
-                            Text("Local IP: ")
-                            Spacer()
-                            Text("\(vm.ipLocal)")
-                        }
-                        HStack {
-                            Text("Public IP: ")
-                            Spacer()
-                            Text("\(vm.ipAddress)")
-                        }
-                    
-                    }.onAppear{
-                        if networkMonitor.isExpensive{
-                            connectionType = "Mobile Data"
-                        }else{
-                            connectionType = "Wi-Fi"
-                        }
-                    }
-                Section (header: Text("Location")){
-                    HStack {
-                        Spacer()
-                        Text("\(vm.ipGeo.city) - \(vm.ipGeo.region)")
-                        Spacer()
-                    }
-                    ZStack {
-                        Map(coordinateRegion: $vm.location)
-                            .cornerRadius(10)
-                            .frame(width: 300,height: 300,alignment: .center)
                             
-                        Circle()
-                            .frame(width: 20,height: 20,alignment: .center)
-                            .foregroundColor(.blue.opacity(0.2))
-                        VStack {
+                        }.frame(maxWidth: .infinity,maxHeight: 300,alignment: .center)
+                        
+                        HStack {
+                            Text("Provider: ")
                             Spacer()
-                            VStack(spacing: 10){
-                                Text("IP: \(vm.ipAddress)")
-                                Text("\(vm.ipGeo.city) - \(vm.ipGeo.region)")
-                            }
-                            .frame(width: 200)
-                            .background(.thinMaterial.opacity(0.7))
-                            .cornerRadius(10)
+                            Text("\(vm.ipGeo.org)")
                         }
                         
-                    }.frame(maxWidth: .infinity,maxHeight: 300,alignment: .center)
-                    
-                    HStack {
-                        Text("Provider: ")
-                        Spacer()
-                        Text("\(vm.ipGeo.org)")
                     }
-                    
-                }
-               
+                
             }
-            .navigationTitle("InfoIP")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            vm.fetchIP()
-                        } label: {
-                            Image(systemName: "arrow.counterclockwise")
-                        }
-
-                    }
-                }
+            
+                                
+            
+        }
             
            /* VStack(alignment: .leading, spacing: 20) {
                 HStack {
@@ -132,7 +121,7 @@ struct MainView: View {
                 }.frame(width: 350,height: 350)
                 
             }*///End VStack
-        }
+       // }
        
         
     }

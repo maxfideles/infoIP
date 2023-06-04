@@ -13,14 +13,14 @@ extension MainView{
     
     final class IPViewModel: ObservableObject{
         @Published var ipAddress = "Retrieving..."
-        @Published var ipGeo = IPGeo(city: "City", region: "Region", timezone: "",org: "Provider")
+        @Published var ipGeo = IPGeo(city: "City", region: "Region", timezone: "",org: "Provider",country_name: "Country")
         @Published var location = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
         @Published var ipLocal = "Retrieving"
         
         private let api = NetworkMonitor()
         
         init(){
-            fetchIP()
+           // fetchIP()
            ipLocal =  api.getIPLocal() ?? "Searching..."
         }
         

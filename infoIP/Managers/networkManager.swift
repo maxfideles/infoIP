@@ -112,6 +112,7 @@ struct IPGeo: Decodable{
     var region: String
     var timezone: String
     var org: String
+    var country_name:String
 }
 
 struct IPCoordinates: Decodable{

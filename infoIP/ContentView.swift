@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {        
+    var body: some View {
+        
         VStack {
-            MainView()
+            VStack {
+                Text("InfoIP")
+                    .font(.title)
+                MainView()
+                    
+            }
         
         }
             }
