@@ -20,7 +20,7 @@ extension MainView{
         private let api = NetworkMonitor()
         
         init(){
-           // fetchIP()
+           fetchIP()
            ipLocal =  api.getIPLocal() ?? "Searching..."
         }
         

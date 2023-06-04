@@ -13,7 +13,8 @@ struct ContentView: View {
         VStack {
             VStack {
                 Text("InfoIP")
-                    .font(.title)
+                    .font(.system(size: 20, weight: .semibold, design: .rounded))
+                
                 MainView()
                     
             }
