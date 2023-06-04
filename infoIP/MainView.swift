@@ -43,7 +43,7 @@ struct MainView: View {
                             }
                         
                         }
-                    Section (header: Text("Location")){
+                    Section {
                         HStack {
                             Spacer()
                             Text("\(vm.ipGeo.city) - \(vm.ipGeo.region)")
@@ -77,9 +77,15 @@ struct MainView: View {
                             Text("\(vm.ipGeo.org)")
                         }
                         
-                    }
+                    }header: {
+                        Text("Location")
+                    } footer:{
+                        Text("To know more apps like this one, access the [developer's page](https://apps.apple.com/gb/developer/max-victor-fideles-cunha/id1683987057)")
+                    }.frame(maxWidth: .infinity,alignment: .center)
+                    .multilineTextAlignment(.center)
                 
             }
+            
             
                                 
             
