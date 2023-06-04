@@ -80,9 +80,10 @@ struct MainView: View {
                     }header: {
                         Text("Location")
                     } footer:{
-                        Text("To know more apps like this one, access the [developer's page](https://apps.apple.com/gb/developer/max-victor-fideles-cunha/id1683987057)")
-                    }.frame(maxWidth: .infinity,alignment: .center)
-                    .multilineTextAlignment(.center)
+                        Text("To know more apps like this one, access the [developer's page](https://apps.apple.com/gb/developer/max-victor-fideles-cunha/id1683987057)").frame(maxWidth: .infinity)
+                            .multilineTextAlignment(.center)
+                    }//.frame(maxWidth: .infinity)
+                    //.multilineTextAlignment(.center)
                 
             }
             
