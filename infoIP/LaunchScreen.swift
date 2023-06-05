@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct LaunchScreen: View {
-    
+    @EnvironmentObject var launchScreenManager : LaunchScreenManager
     @State private var firstPhaseisAnimating: Bool = false
+    @State private var secondPhaseisAnimating: Bool = false
+
+    
     private let timer =   Timer.publish(every:0.65,on:.main,in:.common).autoconnect()
     
     var body: some View {
@@ -19,9 +22,20 @@ struct LaunchScreen: View {
             background
             logo
         }.onReceive(timer) { input in
-            withAnimation(.spring()){
-                firstPhaseisAnimating.toggle()
+            
+            switch launchScreenManager.state{
+            case .first:
+                withAnimation(.spring()){
+                    firstPhaseisAnimating.toggle()
+                }
+            case .second:
+                withAnimation(.spring()){
+                    secondPhaseisAnimating.toggle()
+                }
+            default: break
             }
+            
+            
         }
     }
 }
@@ -29,6 +43,7 @@ struct LaunchScreen: View {
 struct LaunchScreen_Previews: PreviewProvider {
     static var previews: some View {
         LaunchScreen()
+            .environmentObject(LaunchScreenManager())
     }
 }
 
@@ -41,7 +56,8 @@ private extension LaunchScreen {
     
     var logo: some View{
         Image("Logo")
-            .scaleEffect(firstPhaseisAnimating ? 0.9:1.5)
+            .scaleEffect(firstPhaseisAnimating ? 1:1.5)
+            .scaleEffect(secondPhaseisAnimating ? 0:1.4)
     }
     
 }

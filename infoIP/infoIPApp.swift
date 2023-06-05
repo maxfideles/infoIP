@@ -10,10 +10,19 @@ import SwiftUI
 @main
 struct infoIPApp: App {
     @StateObject private var reviewsManager = ReviewsRequestManager()
+    @StateObject  var launchScreenManager = LaunchScreenManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(reviewsManager)
+            ZStack {
+                ContentView()
+                    .environmentObject(reviewsManager)
+                
+                if launchScreenManager.state != .completed  {
+                    LaunchScreen()
+                }
+                
+                
+            }.environmentObject(launchScreenManager)
         }
     }
 }
