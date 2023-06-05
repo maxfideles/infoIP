@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0BB6F62A2D3DD60052C547 /* ReviewRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0BB6F52A2D3DD60052C547 /* ReviewRequestManager.swift */; };
+		FB0BB6FE2A2D3E6B0052C547 /* AppReviewAndRatingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0BB6FD2A2D3E6B0052C547 /* AppReviewAndRatingsTests.swift */; };
 		FB9130AB2A2A70D5000F51D0 /* infoIPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9130AA2A2A70D5000F51D0 /* infoIPApp.swift */; };
 		FB9130AD2A2A70D5000F51D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9130AC2A2A70D5000F51D0 /* ContentView.swift */; };
 		FB9130AF2A2A70D7000F51D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9130AE2A2A70D7000F51D0 /* Assets.xcassets */; };
@@ -16,7 +18,20 @@
 		FB964CCB2A2A989E00219856 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB964CCA2A2A989E00219856 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FB0BB6FF2A2D3E6B0052C547 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB91309F2A2A70D5000F51D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB9130A62A2A70D5000F51D0;
+			remoteInfo = infoIP;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		FB0BB6F52A2D3DD60052C547 /* ReviewRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestManager.swift; sourceTree = "<group>"; };
+		FB0BB6FB2A2D3E6B0052C547 /* AppReviewAndRatingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppReviewAndRatingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0BB6FD2A2D3E6B0052C547 /* AppReviewAndRatingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewAndRatingsTests.swift; sourceTree = "<group>"; };
 		FB9130A72A2A70D5000F51D0 /* infoIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infoIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9130AA2A2A70D5000F51D0 /* infoIPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoIPApp.swift; sourceTree = "<group>"; };
 		FB9130AC2A2A70D5000F51D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,6 +43,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FB0BB6F82A2D3E6B0052C547 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB9130A42A2A70D5000F51D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,10 +60,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB0BB6FC2A2D3E6B0052C547 /* AppReviewAndRatingsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB0BB6FD2A2D3E6B0052C547 /* AppReviewAndRatingsTests.swift */,
+			);
+			path = AppReviewAndRatingsTests;
+			sourceTree = "<group>";
+		};
 		FB91309E2A2A70D5000F51D0 = {
 			isa = PBXGroup;
 			children = (
 				FB9130A92A2A70D5000F51D0 /* infoIP */,
+				FB0BB6FC2A2D3E6B0052C547 /* AppReviewAndRatingsTests */,
 				FB9130A82A2A70D5000F51D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				FB9130A72A2A70D5000F51D0 /* infoIP.app */,
+				FB0BB6FB2A2D3E6B0052C547 /* AppReviewAndRatingsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				FB964CC62A2A76EE00219856 /* networkManager.swift */,
+				FB0BB6F52A2D3DD60052C547 /* ReviewRequestManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -87,6 +120,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FB0BB6FA2A2D3E6B0052C547 /* AppReviewAndRatingsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB0BB7012A2D3E6B0052C547 /* Build configuration list for PBXNativeTarget "AppReviewAndRatingsTests" */;
+			buildPhases = (
+				FB0BB6F72A2D3E6B0052C547 /* Sources */,
+				FB0BB6F82A2D3E6B0052C547 /* Frameworks */,
+				FB0BB6F92A2D3E6B0052C547 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB0BB7002A2D3E6B0052C547 /* PBXTargetDependency */,
+			);
+			name = AppReviewAndRatingsTests;
+			productName = AppReviewAndRatingsTests;
+			productReference = FB0BB6FB2A2D3E6B0052C547 /* AppReviewAndRatingsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FB9130A62A2A70D5000F51D0 /* infoIP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB9130B52A2A70D7000F51D0 /* Build configuration list for PBXNativeTarget "infoIP" */;
@@ -114,6 +165,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					FB0BB6FA2A2D3E6B0052C547 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FB9130A62A2A70D5000F51D0;
+					};
 					FB9130A62A2A70D5000F51D0 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -133,11 +188,19 @@
 			projectRoot = "";
 			targets = (
 				FB9130A62A2A70D5000F51D0 /* infoIP */,
+				FB0BB6FA2A2D3E6B0052C547 /* AppReviewAndRatingsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FB0BB6F92A2D3E6B0052C547 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB9130A52A2A70D5000F51D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,6 +213,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FB0BB6F72A2D3E6B0052C547 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0BB6FE2A2D3E6B0052C547 /* AppReviewAndRatingsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB9130A32A2A70D5000F51D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -159,12 +230,59 @@
 				FB964CC92A2A7ED100219856 /* MainView.swift in Sources */,
 				FB9130AD2A2A70D5000F51D0 /* ContentView.swift in Sources */,
 				FB9130AB2A2A70D5000F51D0 /* infoIPApp.swift in Sources */,
+				FB0BB6F62A2D3DD60052C547 /* ReviewRequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FB0BB7002A2D3E6B0052C547 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB9130A62A2A70D5000F51D0 /* infoIP */;
+			targetProxy = FB0BB6FF2A2D3E6B0052C547 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		FB0BB7022A2D3E6B0052C547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WN238JHNR8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.max.AppReviewAndRatingsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/infoIP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/infoIP";
+			};
+			name = Debug;
+		};
+		FB0BB7032A2D3E6B0052C547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WN238JHNR8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.max.AppReviewAndRatingsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/infoIP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/infoIP";
+			};
+			name = Release;
+		};
 		FB9130B32A2A70D7000F51D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -297,7 +415,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,7 +451,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,6 +472,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FB0BB7012A2D3E6B0052C547 /* Build configuration list for PBXNativeTarget "AppReviewAndRatingsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB0BB7022A2D3E6B0052C547 /* Debug */,
+				FB0BB7032A2D3E6B0052C547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FB9130A22A2A70D5000F51D0 /* Build configuration list for PBXProject "infoIP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

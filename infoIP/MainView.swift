@@ -7,8 +7,11 @@
 
 import SwiftUI
 import MapKit
+import StoreKit
 
 struct MainView: View {
+    @Environment(\.requestReview)var requestReview: RequestReviewAction
+    @EnvironmentObject  var reviewsManager: ReviewsRequestManager
     @StateObject  var networkMonitor = NetworkMonitor()
     @StateObject var vm = IPViewModel()
     @State var connectionType: String = ""
@@ -90,6 +93,13 @@ struct MainView: View {
             
                                 
             
+        }.onAppear{
+            reviewsManager.increase()
+                
+            if reviewsManager.canAskForReview(){
+                requestReview()
+            }
+            
         }
             
            /* VStack(alignment: .leading, spacing: 20) {
@@ -139,6 +149,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView().environmentObject(ReviewsRequestManager())
     }
 }
