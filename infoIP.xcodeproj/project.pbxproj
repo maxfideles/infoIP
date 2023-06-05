@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FB0BB6F62A2D3DD60052C547 /* ReviewRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0BB6F52A2D3DD60052C547 /* ReviewRequestManager.swift */; };
 		FB0BB6FE2A2D3E6B0052C547 /* AppReviewAndRatingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0BB6FD2A2D3E6B0052C547 /* AppReviewAndRatingsTests.swift */; };
+		FB0BB7062A2D76BC0052C547 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0BB7052A2D76BC0052C547 /* LaunchScreen.swift */; };
 		FB9130AB2A2A70D5000F51D0 /* infoIPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9130AA2A2A70D5000F51D0 /* infoIPApp.swift */; };
 		FB9130AD2A2A70D5000F51D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9130AC2A2A70D5000F51D0 /* ContentView.swift */; };
 		FB9130AF2A2A70D7000F51D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9130AE2A2A70D7000F51D0 /* Assets.xcassets */; };
@@ -32,6 +33,8 @@
 		FB0BB6F52A2D3DD60052C547 /* ReviewRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestManager.swift; sourceTree = "<group>"; };
 		FB0BB6FB2A2D3E6B0052C547 /* AppReviewAndRatingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppReviewAndRatingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0BB6FD2A2D3E6B0052C547 /* AppReviewAndRatingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewAndRatingsTests.swift; sourceTree = "<group>"; };
+		FB0BB7042A2D71D50052C547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FB0BB7052A2D76BC0052C547 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		FB9130A72A2A70D5000F51D0 /* infoIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infoIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9130AA2A2A70D5000F51D0 /* infoIPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoIPApp.swift; sourceTree = "<group>"; };
 		FB9130AC2A2A70D5000F51D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 		FB9130A92A2A70D5000F51D0 /* infoIP */ = {
 			isa = PBXGroup;
 			children = (
+				FB0BB7042A2D71D50052C547 /* Info.plist */,
 				FB964CC52A2A76D600219856 /* Managers */,
 				FB9130AA2A2A70D5000F51D0 /* infoIPApp.swift */,
 				FB9130AC2A2A70D5000F51D0 /* ContentView.swift */,
@@ -96,6 +100,7 @@
 				FB964CCA2A2A989E00219856 /* MainViewModel.swift */,
 				FB9130AE2A2A70D7000F51D0 /* Assets.xcassets */,
 				FB9130B02A2A70D7000F51D0 /* Preview Content */,
+				FB0BB7052A2D76BC0052C547 /* LaunchScreen.swift */,
 			);
 			path = infoIP;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB0BB7062A2D76BC0052C547 /* LaunchScreen.swift in Sources */,
 				FB964CCB2A2A989E00219856 /* MainViewModel.swift in Sources */,
 				FB964CC72A2A76EE00219856 /* networkManager.swift in Sources */,
 				FB964CC92A2A7ED100219856 /* MainView.swift in Sources */,
@@ -408,11 +414,11 @@
 				DEVELOPMENT_TEAM = WN238JHNR8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = infoIP/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = InfoIP;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -444,11 +450,11 @@
 				DEVELOPMENT_TEAM = WN238JHNR8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = infoIP/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = InfoIP;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
