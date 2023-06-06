@@ -49,7 +49,11 @@ struct MainView: View {
                     Section {
                         HStack {
                             Spacer()
-                            Text("\(vm.ipGeo.city) - \(vm.ipGeo.region)")
+                            if vm.ipGeo.longitude == 0{
+                            ProgressView()
+                            }else{
+                                Text("\(vm.ipGeo.city) - \(vm.ipGeo.region)")
+                            }
                             Spacer()
                         }
                         ZStack {
@@ -77,8 +81,13 @@ struct MainView: View {
                         HStack {
                             Text("Provider: ")
                             Spacer()
+                            if vm.ipGeo.longitude == 0 {
+                                ProgressView()
+                        }else{
+                            
                             Text("\(vm.ipGeo.org)")
                         }
+                    }
                         
                     }header: {
                         Text("Location")
@@ -87,6 +96,10 @@ struct MainView: View {
                             .multilineTextAlignment(.center)
                     }//.frame(maxWidth: .infinity)
                     //.multilineTextAlignment(.center)
+                
+            }.onChange(of: networkMonitor.isActive) { newValue in
+                vm.ipLocal = networkMonitor.getIPLocal() ?? "Retrieving..."
+                vm.fetchIP()
                 
             }
             
@@ -102,45 +115,6 @@ struct MainView: View {
             
         }
             
-           /* VStack(alignment: .leading, spacing: 20) {
-                HStack {
-                    Text(verbatim: "Connected: \(networkMonitor.isActive)" )
-                    Image(systemName: networkMonitor.isActive ? "checkmark.circle":"x.circle")
-                        .foregroundColor(networkMonitor.isActive ? .green:.red)
-                }
-                Text(verbatim: "Low Data Mode: \(networkMonitor.isConstrained)" )
-                Text(verbatim: "Mobile Data / Hotspot : \(networkMonitor.isExpensive)" )
-                Text(verbatim: "Connected: \(networkMonitor.connectionType)" )
-                Text("IP: \(vm.ipAddress)")
-                Text("Provedor: \(vm.ipGeo.org)")
-                Text("IpLocal: \(vm.ipLocal)")
-                    
-                
-                
-                ZStack {
-                    Map(coordinateRegion: $vm.location)
-                        .cornerRadius(10)
-                        
-                    Circle()
-                        .frame(width: 20,height: 20,alignment: .center)
-                        .foregroundColor(.blue.opacity(0.2))
-                    VStack {
-                        Spacer()
-                        VStack(spacing: 10){
-                            Text("IP: \(vm.ipAddress)")
-                            Text("\(vm.ipGeo.city) - \(vm.ipGeo.region)")
-                        }
-                        .frame(width: 200)
-                        .background(.thinMaterial.opacity(0.7))
-                        .cornerRadius(10)
-                    }
-                    
-                }.frame(width: 350,height: 350)
-                
-            }*///End VStack
-       // }
-       
-        
     }
 
 

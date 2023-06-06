@@ -113,12 +113,14 @@ struct IPGeo: Decodable{
     var timezone: String
     var org: String
     var country_name:String
-}
-
-struct IPCoordinates: Decodable{
     var latitude: Double
     var longitude: Double
 }
+
+//struct IPCoordinates: Decodable{
+  //  var latitude: Double
+    //var longitude: Double
+//}
 
 
 
