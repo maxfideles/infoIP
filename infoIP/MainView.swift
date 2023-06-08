@@ -102,6 +102,11 @@ struct MainView: View {
                 vm.fetchIP()
                 
             }
+            .onChange(of: networkMonitor.connectionType) { newValue in
+                vm.ipLocal = networkMonitor.getIPLocal() ?? "Retrieving..."
+                vm.fetchIP()
+                
+            }
             
             
                                 
@@ -112,6 +117,7 @@ struct MainView: View {
             if reviewsManager.canAskForReview(){
                 requestReview()
             }
+            vm.fetchGeoData(ip: vm.ipAddress)
             
         }
             

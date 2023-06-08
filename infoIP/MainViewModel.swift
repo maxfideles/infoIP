@@ -58,7 +58,7 @@ extension MainView{
             
         }
         
-        private func fetchGeoData(ip: String){
+         func fetchGeoData(ip: String){
             
             api.fetchData(url: "https://ipapi.co/\(ip)/json/", model: IPGeo.self){ result in
                 self.runOnMain {
